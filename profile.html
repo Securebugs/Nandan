@@ -294,9 +294,29 @@ margin-right: 5px;
   </svg>
   Need Help?
 </a>
-	 
-	  <a href='http://www.freevisitorcounters.com'>more on freevisitorcounters.com</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7762e351b49348fbadcadda4b61913ccf35ede3b'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1015518/t/13"></script>
+	 <style>
+  #counter {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+</style>
+
+<div id="counter">
+  Page Visitors: <span>0</span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    var pageVisitors = 0;
+
+    $.get("https://www.example.com/page-visitors", function(data) {
+      pageVisitors = data;
+      $('#counter span').text(pageVisitors);
+    });
+  });
+</script>
       </div>
 
       <!-- About Me -->
