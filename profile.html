@@ -294,29 +294,22 @@ margin-right: 5px;
   </svg>
   Need Help?
 </a>
-	 <style>
-  #counter {
+	<style>
+  #visitor-counter {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  #visitor-counter span {
     font-size: 1.2em;
     font-weight: bold;
-    margin: 0 auto;
   }
 </style>
 
-<div id="counter">
-  Page Visitors: <span>0</span>
+<div id="visitor-counter">
+  Total Visitors: <span>{{ getTotalVisitors() }}</span>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  $(document).ready(function() {
-    var pageVisitors = 0;
-
-    $.get("https://www.example.com/page-visitors", function(data) {
-      pageVisitors = data;
-      $('#counter span').text(pageVisitors);
-    });
-  });
-</script>
       </div>
 
       <!-- About Me -->
